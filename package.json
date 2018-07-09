@@ -1,0 +1,24 @@
+{
+  "name": "crypto-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/images/btc.png --prune=true --out=release-builds",
+    "package-win": "electron-packager . Crypto-App --overwrite --asar=true --platform=win32 --arch=x64 --icon=assets/images/btc.ico --prune=true --out=release-builds --version-string.CompanyName=\"Victorious Content\" --version-string.FileDescription=\"An App that shows the Bitcoin price\" --version-string.ProductName=\"Bitcoin App\"",
+    "package-linux": "electron-packager . Crypto-App --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/images/btc.png --prune=true --out=release-builds"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "2.0.4",
+    "electron-packager": "^12.1.0",
+    "electron-reload": "^1.2.5"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "jquery": "^3.3.1"
+  }
+}
